@@ -21,13 +21,13 @@ class Billete{
 //Definimos la caja de billetes con la cantidad de dinero inicial con la que cuenta.
 var cajaBilletes = [];
 var entregado = [];
-cajaBilletes.push(new Billete(500, 1000));
+cajaBilletes.push(new Billete(500, 100));
 cajaBilletes.push(new Billete(100, 100));
-cajaBilletes.push(new Billete(50, 1000));
-cajaBilletes.push(new Billete(20, 1000));
-cajaBilletes.push(new Billete(10, 1000));
-cajaBilletes.push(new Billete(5, 1000));
-cajaBilletes.push(new Billete(1, 1000));
+cajaBilletes.push(new Billete(50, 100));
+cajaBilletes.push(new Billete(20, 100));
+cajaBilletes.push(new Billete(10, 100));
+cajaBilletes.push(new Billete(5, 100));
+cajaBilletes.push(new Billete(1, 100));
 
 //Función para actualizar la caja de billetes con los billetes entregados.
 function actualizaCaja(){
