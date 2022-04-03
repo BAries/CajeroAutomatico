@@ -8,7 +8,7 @@ html {
 }
 body {
     background-color: #dad9dd;
-    min-width: 500px;
+    min-width: 820px;
 }
 
 .letra-grande {
@@ -34,7 +34,7 @@ body {
     margin-top:-36%;
 }
 .caja-entrega{
-    width: 700px;
+    width: 500px;
 }
 
 #pantalla-resultado {
