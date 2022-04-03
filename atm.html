@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+<body class="container">
+    <div class="maquina container">
+        <div class="pantalla container" id="pantalla">
+            <p id="pantalla-resultado" class="container letra-grande"></p>
+            <p id="pantalla-extraer">
+                <input type="number" id="dinero">
+                <input type="button" value="Extraer" id="extraer">
+            </p>
+        </div>
+    </div>
+    <canvas id="caja-entrega" class="caja-entrega letra-grande" width="500" height="500"></p>
+    <script src="./cajero.js"></script>
+</body>
+</html>
