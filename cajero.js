@@ -29,6 +29,14 @@ cajaBilletes.push(new Billete(10, 1000));
 cajaBilletes.push(new Billete(5, 1000));
 cajaBilletes.push(new Billete(1, 1000));
 
+var saldo = 0;
+function calcularSaldo(){
+    saldo = 0;
+    for(var bi of cajaBilletes){
+        saldo += bi.valor * bi.cantidad;
+    }
+}
+
 //Función para actualizar la caja de billetes con los billetes entregados.
 function actualizaCaja(){
     for(var bi of entregado){
@@ -47,6 +55,10 @@ function imprimeBilletes(){
     for (var bi of entregado){
         var i = 0;
         while(i < bi.cantidad){
+            if (x >= 350){
+                x = 0;
+                y += 50; 
+            }
             cajaEntrega.drawImage(bi.imagen, x, y);
             x += 15;
             console.log(x+","+y);
@@ -97,6 +109,13 @@ function entregarDinero(){
     }
 }
 
+function pantallaInicio() {
+    calcularSaldo();
+    r.innerHTML = "";
+    r.innerHTML += "Bienvenido a nuestro banco. <br> Cuentas con un saldo de $" + saldo + ".00 mx. <br> Por favor indica el monto que deseas retirar.";
+    ce.width=ce.width;
+}
+
 // Traemos los elementos necesarios de nuestro HTML.
 // El botón 'Extraer' y su respectiva caja de texto con el dinero indicado a extraer.
 var r = document.getElementById("pantalla-resultado");
@@ -104,4 +123,7 @@ var ce = document.getElementById("caja-entrega");
 var cajaEntrega = ce.getContext("2d");
 var b = document.getElementById("extraer");
 b.addEventListener("click", entregarDinero);
-r.innerHTML += "Bienvenido a nuestro banco. <br> Por favor indica el monto que deseas retirar";
+var h = document.getElementById("inicio");
+h.addEventListener("click", pantallaInicio);
+pantallaInicio();
+
